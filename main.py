@@ -161,8 +161,8 @@ if __name__ == "__main__":
     # ft: clip is fine-tuned --- mean: average of descriptions' embedding is used for refrence
     # M: multiple descriptions --- sift: only true_labeled soft labels be shared with the server
     configurations = [
-        #{"setup": "clinetFM_sl_yn"}, # sl: soft label
-        #{"setup": "clinetFM_pr_yn"}, # pr: promt
+        {"setup": "clinetFM_sl_yn"}, # sl: soft label
+        {"setup": "clinetFM_pr_yn"}, # pr: promt
         {"setup": "clinetFM_ad_yn"}, # ad: adaptor
     ]
 

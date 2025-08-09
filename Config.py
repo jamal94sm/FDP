@@ -10,8 +10,8 @@ def get_args():
     parser = argparse.ArgumentParser(description="Federated Learning with Prompt Tuning")
 
     parser.add_argument('--setup', default="local")
-    #parser.add_argument('--device', type=str, default="cuda" if torch.cuda.is_available() else "cpu") 
-    parser.add_argument('--device',default="mps" if torch.backends.mps.is_available() else "cpu")# for runing on mps MAC OS     
+    parser.add_argument('--device', type=str, default="cuda" if torch.cuda.is_available() else "cpu") 
+    #parser.add_argument('--device',default="mps" if torch.backends.mps.is_available() else "cpu")# for runing on mps MAC OS     
     parser.add_argument('--num_clients', type=int, default=10)
     parser.add_argument('--local_model_name', type=str, default="EfficientNet")
     parser.add_argument('--num_train_samples', type=int, default=50000)
@@ -24,7 +24,7 @@ def get_args():
     parser.add_argument('--local_epochs', type=int, default=1)
     parser.add_argument('--num_prompts', type=int, default=4)
     parser.add_argument('--default_temp', type=float, default=1)
-    parser.add_argument('--alpha_dirichlet', type=float, default=0.1)
+    parser.add_argument('--alpha_dirichlet', type=float, default=1)
     parser.add_argument('--load_saved_models', action='store_true')
     parser.add_argument('--generator_name', type=str, default="AttentionModel")
     parser.add_argument('--output_name', type=str, default="AAA")

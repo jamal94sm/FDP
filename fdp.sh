@@ -27,4 +27,4 @@ module load cuda
 
 source /home/shahab33/fed2p/bin/activate #Narval
 
-python main.py --output_name "5K_" # this is the direction and the name of your code
+python main.py --output_name "5K_alpha1_" # this is the direction and the name of your code
